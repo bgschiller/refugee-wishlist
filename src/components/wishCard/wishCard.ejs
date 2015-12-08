@@ -8,12 +8,17 @@
         <div class="text-styling family">
           Family: <span>{{family}}</span>
         </div>
+        {% if (amount_collected || amount_needed) { %}
         <div class="text-styling progress-text">
           Progress: <span>{{amount_collected}} / {{amount_needed}}</span>
         </div>
+        {% } %}
       </div>
       <div class="col s4">
         <a class="waves-effect orange darken-3 white-text btn claim-button modal-trigger" data-target="donateInstructions"><span class="center-align">Donate</span></a>
+      </div>
+      <div class="col s12">
+        <p>{{additional_notes}}</p>
       </div>
     </div>
     <div class="progress-bar"></div>

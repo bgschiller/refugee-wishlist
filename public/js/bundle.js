@@ -12895,11 +12895,17 @@
 	((__t=(item_name))==null?'':_.escape(__t))+
 	'</span>\n        </div>\n        <div class="text-styling family">\n          Family: <span>'+
 	((__t=(family))==null?'':_.escape(__t))+
-	'</span>\n        </div>\n        <div class="text-styling progress-text">\n          Progress: <span>'+
+	'</span>\n        </div>\n        ';
+	 if (amount_collected || amount_needed) { 
+	__p+='\n        <div class="text-styling progress-text">\n          Progress: <span>'+
 	((__t=(amount_collected))==null?'':_.escape(__t))+
 	' / '+
 	((__t=(amount_needed))==null?'':_.escape(__t))+
-	'</span>\n        </div>\n      </div>\n      <div class="col s4">\n        <a class="waves-effect orange darken-3 white-text btn claim-button modal-trigger" data-target="donateInstructions"><span class="center-align">Donate</span></a>\n      </div>\n    </div>\n    <div class="progress-bar"></div>\n  </div>\n</div>\n';
+	'</span>\n        </div>\n        ';
+	 } 
+	__p+='\n      </div>\n      <div class="col s4">\n        <a class="waves-effect orange darken-3 white-text btn claim-button modal-trigger" data-target="donateInstructions"><span class="center-align">Donate</span></a>\n      </div>\n      <div class="col s12">\n        <p>'+
+	((__t=(additional_notes))==null?'':_.escape(__t))+
+	'</p>\n      </div>\n    </div>\n    <div class="progress-bar"></div>\n  </div>\n</div>\n';
 	}
 	return __p;
 	};
@@ -12923,12 +12929,16 @@
 	__webpack_require__(11);
 	exports.default = Backbone.View.extend({
 	  render: function render() {
-	    var pct = 100 * this.model.get('amount_collected') / this.model.get('amount_needed'),
-	        isComplete = +this.model.get('amount_collected') >= +this.model.get('amount_needed');
-	    this.$el.html((0, _progressBar2.default)({
-	      pct: pct,
-	      isComplete: isComplete
-	    }));
+	    var collected = +this.model.get('amount_collected').replace(/[^0-9\.]/g, ''),
+	        needed = +this.model.get('amount_needed').replace(/[^0-9\.]/g, ''),
+	        pct = 100 * collected / needed,
+	        isComplete = collected >= needed;
+	    if (needed !== 0) {
+	      this.$el.html((0, _progressBar2.default)({
+	        pct: pct,
+	        isComplete: isComplete
+	      }));
+	    }
 	    return this;
 	  }
 	});

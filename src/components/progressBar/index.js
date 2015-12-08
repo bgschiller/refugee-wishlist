@@ -3,12 +3,16 @@ import template from './progressBar.ejs'
 
 export default Backbone.View.extend({
   render: function(){
-    var pct = 100 * this.model.get('amount_collected') / this.model.get('amount_needed'),
-        isComplete = +this.model.get('amount_collected') >= +this.model.get('amount_needed')
-    this.$el.html(template({
-      pct,
-      isComplete
-    }))
+    var collected = +this.model.get('amount_collected').replace(/[^0-9\.]/g, ''),
+        needed = +this.model.get('amount_needed').replace(/[^0-9\.]/g, ''),
+        pct = 100 * collected / needed,
+        isComplete = collected >= needed
+    if (needed !== 0){
+      this.$el.html(template({
+        pct,
+        isComplete
+      }))
+    }
     return this
   }
 })
