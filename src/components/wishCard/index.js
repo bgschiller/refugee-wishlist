@@ -1,6 +1,7 @@
 import Backbone from 'backbone'
 import template from './wishCard.ejs'
 import ProgressBarView from '../progressBar'
+require('./wishCard.less')
 
 export default Backbone.View.extend({
   initialize: function() {

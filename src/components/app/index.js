@@ -2,7 +2,11 @@ import Backbone from 'backbone'
 import template from './app.ejs'
 import WishlistView from '../wishlist'
 import _ from 'underscore'
+import $ from 'jquery'
+require('./app.less')
+
 window._ = _
+window.jQuery = window.$ = $
 
 export default Backbone.View.extend({
   initialize: function(){

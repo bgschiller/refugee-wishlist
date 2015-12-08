@@ -93,9 +93,16 @@
 
 	var _underscore2 = _interopRequireDefault(_underscore);
 
+	var _jquery = __webpack_require__(4);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	__webpack_require__(20);
+
 	window._ = _underscore2.default;
+	window.jQuery = window.$ = _jquery2.default;
 
 	exports.default = _backbone2.default.View.extend({
 	  initialize: function initialize() {
@@ -12786,7 +12793,7 @@
 	module.exports = function(obj){
 	var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 	with(obj||{}){
-	__p+='<h1 class="headline">Refugee Wishlist</h1>\n\n<div class="wishlist"></div>\n';
+	__p+='<h4 class="center-align">Refugee Wishlist</h4>\n\n<div class="wishlist"></div>\n';
 	}
 	return __p;
 	};
@@ -12809,15 +12816,20 @@
 
 	var _wishCard2 = _interopRequireDefault(_wishCard);
 
+	var _wishList = __webpack_require__(17);
+
+	var _wishList2 = _interopRequireDefault(_wishList);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _backbone2.default.View.extend({
-	  tagName: 'ul',
 	  initialize: function initialize() {
 	    this.listenTo(this.collection, 'reset', this.render);
 	  },
 	  render: function render() {
-	    this.$el.empty().append(this.collection.map(function (model) {
+	    this.$el.empty().append((0, _wishList2.default)());
+
+	    this.$('.list-target').append(this.collection.map(function (model) {
 	      return new _wishCard2.default({ model: model }).render().el;
 	    }));
 	    return this;
@@ -12848,6 +12860,8 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	__webpack_require__(18);
+
 	exports.default = _backbone2.default.View.extend({
 	  initialize: function initialize() {
 	    this.progress = new _progressBar2.default({ model: this.model });
@@ -12867,15 +12881,15 @@
 	module.exports = function(obj){
 	var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 	with(obj||{}){
-	__p+='<div class="wish-card">\n  <pre>\n    family: '+
-	((__t=(family))==null?'':_.escape(__t))+
-	'\n    item: '+
+	__p+='<div class="col s12 m6 l4">\n  <div class="wish-card">\n    <div class="row">\n      <div class="col s8">\n        <div class="text-styling item">\n          Item: <span class="harder">'+
 	((__t=(item_name))==null?'':_.escape(__t))+
-	'\n    progress: '+
+	'</span>\n        </div>\n        <div class="text-styling family">\n          Family: <span>'+
+	((__t=(family))==null?'':_.escape(__t))+
+	'</span>\n        </div>\n        <div class="text-styling progress-text">\n          Progress: <span>'+
 	((__t=(amount_collected))==null?'':_.escape(__t))+
 	' / '+
 	((__t=(amount_needed))==null?'':_.escape(__t))+
-	'\n  </pre>\n  <div class="progress-bar"></div>\n</div>\n';
+	'</span>\n        </div>\n      </div>\n      <div class="col s4">\n        <a class="waves-effect orange darken-3 white-text btn claim-button"><span class="center-align">Claim</span></a>\n      </div>\n    </div>\n    <div class="progress-bar"></div>\n  </div>\n</div>\n';
 	}
 	return __p;
 	};
@@ -12899,9 +12913,11 @@
 	__webpack_require__(11);
 	exports.default = Backbone.View.extend({
 	  render: function render() {
-	    var pct = 100 * this.model.get('amount_collected') / this.model.get('amount_needed');
+	    var pct = 100 * this.model.get('amount_collected') / this.model.get('amount_needed'),
+	        isComplete = +this.model.get('amount_collected') >= +this.model.get('amount_needed');
 	    this.$el.html((0, _progressBar2.default)({
-	      pct: pct
+	      pct: pct,
+	      isComplete: isComplete
 	    }));
 	    return this;
 	  }
@@ -12914,7 +12930,9 @@
 	module.exports = function(obj){
 	var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 	with(obj||{}){
-	__p+='<div class="progress">\n  <div class="complete" style="width: '+
+	__p+='<div class="progress-inactive">\n  <div class="'+
+	((__t=(isComplete? 'completed' : 'complete'))==null?'':_.escape(__t))+
+	'" style="width: '+
 	((__t=(pct))==null?'':_.escape(__t))+
 	'%;"></div>\n</div>\n';
 	}
@@ -12956,7 +12974,7 @@
 
 
 	// module
-	exports.push([module.id, ".progress {\n  width: 100%;\n  height: 20px;\n  overflow: hidden;\n  position: relative;\n  margin: 20px 0;\n}\n.progress .complete {\n  background-color: green;\n  height: 20px;\n  position: absolute;\n  left: 0;\n  top: 0;\n}\n", ""]);
+	exports.push([module.id, ".progress-inactive {\n  background-color: #eee;\n  width: 100%;\n  border-radius: 2px;\n  height: 20px;\n  overflow: hidden;\n  position: relative;\n  margin: 20px 0;\n}\n.progress-inactive .complete {\n  background-color: #1e88e5;\n  height: 20px;\n  position: absolute;\n  left: 0;\n  top: 0;\n}\n.progress-inactive .completed {\n  background-color: #43a047;\n  height: 20px;\n  position: absolute;\n  left: 0;\n  top: 0;\n}\n", ""]);
 
 	// exports
 
@@ -13879,6 +13897,98 @@
 	  }
 
 	})(this);
+
+
+/***/ },
+/* 17 */
+/***/ function(module, exports) {
+
+	module.exports = function(obj){
+	var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
+	with(obj||{}){
+	__p+='<div class="row list-target"></div>\n';
+	}
+	return __p;
+	};
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(19);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(14)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./wishCard.less", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./wishCard.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(13)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".list-target .wish-card {\n  padding: 10px;\n  margin: 14px;\n  border-radius: 2px;\n  background-color: #fff;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n  transition: all 0.2s ease-in-out;\n}\n.list-target .wish-card:hover {\n  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);\n}\n.list-target .text-styling {\n  font-family: GillSans, Calibri, Trebuchet, sans-serif;\n  color: #000;\n  opacity: 0.87;\n}\n.list-target .harder {\n  font-weight: 600;\n}\n.list-target .claim-button {\n  width: 100%;\n  padding: 0;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(21);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(14)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./app.less", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./app.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(13)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "body {\n  background-color: #FAFAFA;\n}\n", ""]);
+
+	// exports
 
 
 /***/ }

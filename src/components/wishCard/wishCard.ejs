@@ -1,8 +1,21 @@
-<div class="wish-card">
-  <pre>
-    family: {{family}}
-    item: {{item_name}}
-    progress: {{amount_collected}} / {{amount_needed}}
-  </pre>
-  <div class="progress-bar"></div>
+<div class="col s12 m6 l4">
+  <div class="wish-card">
+    <div class="row">
+      <div class="col s8">
+        <div class="text-styling item">
+          Item: <span class="harder">{{item_name}}</span>
+        </div>
+        <div class="text-styling family">
+          Family: <span>{{family}}</span>
+        </div>
+        <div class="text-styling progress-text">
+          Progress: <span>{{amount_collected}} / {{amount_needed}}</span>
+        </div>
+      </div>
+      <div class="col s4">
+        <a class="waves-effect orange darken-3 white-text btn claim-button"><span class="center-align">Claim</span></a>
+      </div>
+    </div>
+    <div class="progress-bar"></div>
+  </div>
 </div>
