@@ -50,7 +50,7 @@
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _api = __webpack_require__(15);
+	var _api = __webpack_require__(20);
 
 	var _api2 = _interopRequireDefault(_api);
 
@@ -99,7 +99,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	__webpack_require__(20);
+	__webpack_require__(18);
 
 	window._ = _underscore2.default;
 	window.jQuery = window.$ = _jquery2.default;
@@ -12793,7 +12793,7 @@
 	module.exports = function(obj){
 	var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 	with(obj||{}){
-	__p+='<div class="container">\n  <h3 class="header center">Refugee Wishlist</h3>\n  <div class="row center">\n    <p class="flow-text">\n\n      Thank you from the bottom of our hearts!\n    </p>\n  </div>\n  <div class="section">\n      <!--   Icon Section   -->\n      <div class="row">\n        <div class="col s12 m4">\n          <div class="icon-block">\n            <h2 class="center"><i class="material-icons large">subtitles</i></h2>\n            <h5 class="center">Checks</h5>\n            <p class="light">\n              Please make any checks out to the\n              <strong>International Institute</strong>\n              and write\n              <strong>CCC/CRC Drive</strong>\n              in the memo line.\n            </p>\n          </div>\n        </div>\n\n        <div class="col s12 m4">\n          <div class="icon-block">\n            <h2 class="center light-blue-text"><i class="material-icons large">redeem</i></h2>\n            <h5 class="center">Goods</h5>\n\n            <p class="light">\n              Donations will be collected at Central Reform\n              Congregation until December 22.\n            </p>\n          </div>\n        </div>\n\n        <div class="col s12 m4">\n          <div class="icon-block">\n            <h2 class="center light-blue-text"><i class="material-icons large">credit_card</i></h2>\n            <h5 class="center">Credit Cards</h5>\n\n            <p class="light">Credit card donations coming soon!</p>\n          </div>\n        </div>\n      </div>\n\n    </div>\n</div>\n<div class="wishlist"></div>\n\n  <!-- Modal Structure -->\n  <div id="donateInstructions" class="modal">\n    <div class="modal-content">\n      <a class="right modal-close">X</a>\n      <div class="container">\n        <div class="row">\n          <h4>How to Donate</h4>\n        </div>\n        <div class="row">\n          Please email\n          <a href="mailto:bgschiller@gmail.com?subject=refugee+drive">bgschiller@gmail.com</a>\n          in order to update this page\n          with your donation.\n        </div>\n        <div class="row">\n          <div class="col s12">\n            <div class="row">\n              <div class="col s4">\n                <i class="material-icons large">subtitles</i>\n              </div>\n              <div class="col s8">\n                <h5>Checks</h5>\n                <p>Please make any checks out to the\n                <strong>International Institute</strong>\n                and write\n                <strong>CCC/CRC Drive</strong>\n                in the memo line.</p>\n              </div>\n          </div>\n          <div class="col s12">\n            <div class="row">\n              <div class="col s4">\n                <i class="material-icons large">redeem</i>\n              </div>\n              <div class="col s8">\n                <h5>Goods</h5>\n                <p>Material goods (new and used) can be dropped off\n                 at Central Reform Congregation until Dec 22.</p>\n              </div>\n          </div>\n          </div>\n          <div class="col s12">\n            <div class="row">\n              <div class="col s4">\n                <i class="material-icons large">credit_card</i>\n              </div>\n              <div class="col s8">\n                <h5>Credit Card</h5>\n                <p>Credit card donations coming soon!</p>\n              </div>\n          </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class="modal-footer">\n      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Okay</a>\n    </div>\n  </div>\n';
+	__p+='<div class="container">\n  <h3 class="header center">Refugee Wishlist</h3>\n  <div class="row center">\n    <p class="flow-text">\n\n      Thank you from the bottom of our hearts!\n    </p>\n  </div>\n  <div class="section">\n      <!--   Icon Section   -->\n      <div class="row">\n        <div class="col s12 m4">\n          <div class="icon-block">\n            <h2 class="center"><i class="material-icons large">subtitles</i></h2>\n            <h5 class="center">Checks</h5>\n            <p class="light">\n              Please make any checks out to the\n              <strong>International Institute</strong>\n              and write\n              <strong>CCC/CRC Drive</strong>\n              in the memo line.\n            </p>\n            <p>\n              Checks can be mailed to <br>\n              <strong>\n                Central Reform Congregation\n                <br>\n                5020 Waterman Blvd\n                <br>\n                St. Louis, MO 63108\n              </strong>\n            </p>\n          </div>\n        </div>\n\n        <div class="col s12 m4">\n          <div class="icon-block">\n            <h2 class="center light-blue-text"><i class="material-icons large">redeem</i></h2>\n            <h5 class="center">Goods</h5>\n\n            <p class="light">\n              Donations will be collected at Central Reform\n              Congregation until December 22.\n            </p>\n          </div>\n        </div>\n\n        <div class="col s12 m4">\n          <div class="icon-block">\n            <h2 class="center light-blue-text"><i class="material-icons large">credit_card</i></h2>\n            <h5 class="center">Credit Cards</h5>\n\n            <p class="light">Credit card donations coming soon!</p>\n          </div>\n        </div>\n      </div>\n\n    </div>\n</div>\n<div class="wishlist"></div>\n\n  <!-- Modal Structure -->\n  <div id="donateInstructions" class="modal">\n    <div class="modal-content">\n      <a class="right modal-close">X</a>\n      <div class="container">\n        <div class="row">\n          <h4>How to Donate</h4>\n        </div>\n        <div class="row">\n          Please email\n          <a href="mailto:bgschiller@gmail.com?subject=refugee+drive">bgschiller@gmail.com</a>\n          in order to update this page\n          with your donation.\n        </div>\n        <div class="row">\n          <div class="col s12">\n            <div class="row">\n              <div class="col s4">\n                <i class="material-icons large">subtitles</i>\n              </div>\n              <div class="col s8">\n                <h5>Checks</h5>\n                <p>Please make any checks out to the\n                <strong>International Institute</strong>\n                and write\n                <strong>CCC/CRC Drive</strong>\n                in the memo line.</p>\n                <p>\n                  Checks can be mailed to <br>\n                  <strong>\n                    Central Reform Congregation\n                    <br>\n                    5020 Waterman Blvd\n                    <br>\n                    St. Louis, MO 63108\n                  </strong>\n                </p>\n              </div>\n          </div>\n          <div class="col s12">\n            <div class="row">\n              <div class="col s4">\n                <i class="material-icons large">redeem</i>\n              </div>\n              <div class="col s8">\n                <h5>Goods</h5>\n                <p>Material goods (new and used) can be dropped off\n                 at Central Reform Congregation until Dec 22.</p>\n              </div>\n          </div>\n          </div>\n          <div class="col s12">\n            <div class="row">\n              <div class="col s4">\n                <i class="material-icons large">credit_card</i>\n              </div>\n              <div class="col s8">\n                <h5>Credit Card</h5>\n                <p>Credit card donations coming soon!</p>\n              </div>\n          </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class="modal-footer">\n      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Okay</a>\n    </div>\n  </div>\n';
 	}
 	return __p;
 	};
@@ -12864,7 +12864,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	__webpack_require__(18);
+	__webpack_require__(15);
 
 	exports.default = _backbone2.default.View.extend({
 	  initialize: function initialize() {
@@ -13313,6 +13313,98 @@
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(16);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(14)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./wishCard.less", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./wishCard.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(13)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".list-target .wish-card {\n  padding: 10px;\n  margin: 14px;\n  border-radius: 2px;\n  background-color: #fff;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n  transition: all 0.2s ease-in-out;\n}\n.list-target .wish-card:hover {\n  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);\n}\n.list-target .text-styling {\n  font-family: GillSans, Calibri, Trebuchet, sans-serif;\n  color: #000;\n  opacity: 0.87;\n}\n.list-target .harder {\n  font-weight: 600;\n}\n.list-target .claim-button {\n  width: 100%;\n  padding: 0;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 17 */
+/***/ function(module, exports) {
+
+	module.exports = function(obj){
+	var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
+	with(obj||{}){
+	__p+='<div class="row list-target"></div>\n';
+	}
+	return __p;
+	};
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(19);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(14)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./app.less", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./app.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(13)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "body {\n  background-color: #FAFAFA;\n}\n.icon-block {\n  padding: 0 15px;\n}\n.icon-block .material-icons {\n  color: #1e88e5;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -13320,7 +13412,7 @@
 	});
 	exports.default = getWishes;
 
-	var _tabletop = __webpack_require__(16);
+	var _tabletop = __webpack_require__(21);
 
 	var _tabletop2 = _interopRequireDefault(_tabletop);
 
@@ -13347,7 +13439,7 @@
 	}
 
 /***/ },
-/* 16 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;(function(global) {
@@ -13917,98 +14009,6 @@
 	  }
 
 	})(this);
-
-
-/***/ },
-/* 17 */
-/***/ function(module, exports) {
-
-	module.exports = function(obj){
-	var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
-	with(obj||{}){
-	__p+='<div class="row list-target"></div>\n';
-	}
-	return __p;
-	};
-
-/***/ },
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(19);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(14)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./wishCard.less", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./wishCard.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(13)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".list-target .wish-card {\n  padding: 10px;\n  margin: 14px;\n  border-radius: 2px;\n  background-color: #fff;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\n  transition: all 0.2s ease-in-out;\n}\n.list-target .wish-card:hover {\n  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);\n}\n.list-target .text-styling {\n  font-family: GillSans, Calibri, Trebuchet, sans-serif;\n  color: #000;\n  opacity: 0.87;\n}\n.list-target .harder {\n  font-weight: 600;\n}\n.list-target .claim-button {\n  width: 100%;\n  padding: 0;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(21);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(14)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./app.less", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js!./app.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(13)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "body {\n  background-color: #FAFAFA;\n}\n.icon-block {\n  padding: 0 15px;\n}\n.icon-block .material-icons {\n  color: #1e88e5;\n}\n", ""]);
-
-	// exports
 
 
 /***/ }
