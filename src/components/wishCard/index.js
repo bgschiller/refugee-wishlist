@@ -1,6 +1,8 @@
 import Backbone from 'backbone'
 import template from './wishCard.ejs'
 import ProgressBarView from '../progressBar'
+import $ from 'jquery'
+
 require('./wishCard.less')
 
 export default Backbone.View.extend({
@@ -13,4 +15,10 @@ export default Backbone.View.extend({
     this.$('.progress-bar').html(this.progress.render().el)
     return this
   },
+  events:{
+    'click .claim-button': 'instructions'
+  },
+  instructions: function(e){
+    $('#donateInstructions').openModal()
+  }
 })

@@ -12793,7 +12793,7 @@
 	module.exports = function(obj){
 	var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 	with(obj||{}){
-	__p+='<h4 class="center-align">Refugee Wishlist</h4>\n\n<div class="wishlist"></div>\n';
+	__p+='<div class="container">\n  <h3 class="header center">Refugee Wishlist</h3>\n  <div class="row center">\n    <p class="flow-text">\n\n      Thank you from the bottom of our hearts!\n    </p>\n  </div>\n  <div class="section">\n      <!--   Icon Section   -->\n      <div class="row">\n        <div class="col s12 m4">\n          <div class="icon-block">\n            <h2 class="center light-blue-text"><i class="material-icons large">subtitles</i></h2>\n            <h5 class="center">Checks</h5>\n            <p class="light">\n              Please make any checks out to the\n              <strong>International Institute</strong>\n              and write\n              <strong>CCC/CRC Drive</strong>\n              in the memo line.\n            </p>\n          </div>\n        </div>\n\n        <div class="col s12 m4">\n          <div class="icon-block">\n            <h2 class="center light-blue-text"><i class="material-icons large">redeem</i></h2>\n            <h5 class="center">Goods</h5>\n\n            <p class="light">\n              Donations will be collected at Central Reform\n              Congregation until December 22.\n            </p>\n          </div>\n        </div>\n\n        <div class="col s12 m4">\n          <div class="icon-block">\n            <h2 class="center light-blue-text"><i class="material-icons large">credit_card</i></h2>\n            <h5 class="center">Credit Cards</h5>\n\n            <p class="light">Credit card donations coming soon!</p>\n          </div>\n        </div>\n      </div>\n\n    </div>\n</div>\n<div class="wishlist"></div>\n\n  <!-- Modal Structure -->\n  <div id="donateInstructions" class="modal">\n    <div class="modal-content">\n      <a class="right modal-close">X</a>\n      <div class="container">\n        <div class="row">\n          <h4>How to Donate</h4>\n        </div>\n        <div class="row">\n          Please email bgschiller@gmail.com in order to update this page\n          with your donation.\n        </div>\n        <div class="row">\n          <div class="col s12">\n            <div class="row">\n              <div class="col s4">\n                <i class="material-icons large">subtitles</i>\n              </div>\n              <div class="col s8">\n                <h5>Checks</h5>\n                <p>Please make any checks out to the\n                <strong>International Institute</strong>\n                and write\n                <strong>CCC/CRC Drive</strong>\n                in the memo line.</p>\n              </div>\n          </div>\n          <div class="col s12">\n            <div class="row">\n              <div class="col s4">\n                <i class="material-icons large">redeem</i>\n              </div>\n              <div class="col s8">\n                <h5>Goods</h5>\n                <p>Material goods (new and used) can be dropped off\n                 at Central Reform Congregation until Dec 22.</p>\n              </div>\n          </div>\n          </div>\n          <div class="col s12">\n            <div class="row">\n              <div class="col s4">\n                <i class="material-icons large">credit_card</i>\n              </div>\n              <div class="col s8">\n                <h5>Credit Card</h5>\n                <p>Credit card donations coming soon!</p>\n              </div>\n          </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class="modal-footer">\n      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Okay</a>\n    </div>\n  </div>\n';
 	}
 	return __p;
 	};
@@ -12858,6 +12858,10 @@
 
 	var _progressBar2 = _interopRequireDefault(_progressBar);
 
+	var _jquery = __webpack_require__(4);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	__webpack_require__(18);
@@ -12871,6 +12875,12 @@
 
 	    this.$('.progress-bar').html(this.progress.render().el);
 	    return this;
+	  },
+	  events: {
+	    'click .claim-button': 'instructions'
+	  },
+	  instructions: function instructions(e) {
+	    (0, _jquery2.default)('#donateInstructions').openModal();
 	  }
 	});
 
@@ -12889,7 +12899,7 @@
 	((__t=(amount_collected))==null?'':_.escape(__t))+
 	' / '+
 	((__t=(amount_needed))==null?'':_.escape(__t))+
-	'</span>\n        </div>\n      </div>\n      <div class="col s4">\n        <a class="waves-effect orange darken-3 white-text btn claim-button"><span class="center-align">Claim</span></a>\n      </div>\n    </div>\n    <div class="progress-bar"></div>\n  </div>\n</div>\n';
+	'</span>\n        </div>\n      </div>\n      <div class="col s4">\n        <a class="waves-effect orange darken-3 white-text btn claim-button modal-trigger" data-target="donateInstructions"><span class="center-align">Donate</span></a>\n      </div>\n    </div>\n    <div class="progress-bar"></div>\n  </div>\n</div>\n';
 	}
 	return __p;
 	};
@@ -13986,7 +13996,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: #FAFAFA;\n}\n", ""]);
+	exports.push([module.id, "body {\n  background-color: #FAFAFA;\n}\n.icon-block {\n  padding: 0 15px;\n}\n", ""]);
 
 	// exports
 
