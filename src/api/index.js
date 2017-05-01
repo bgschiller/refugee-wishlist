@@ -15,9 +15,7 @@ var wc = new WishCollection()
 
 export default function getWishes(){
   if (!wc.length) {
-    init(function(data, tabletop){
-      wc.reset(data);
-    })
+    init(data => { wc.reset(data) })
   }
   return wc;
 }
